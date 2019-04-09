@@ -20,14 +20,13 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # See https://docs.djangoproject.com/en/2.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'vh5qw*$gogcai&=628ltnom^9&2=$3&y0z22cnp8%9xm9&=c9^'
+SECRET_KEY = os.environ.get('SECRET')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = os.environ.get('DEBUG')
 
 ALLOWED_HOSTS = [
-    'localhost',
-    '127.0.0.1',
+    'imdb-app-rest.herokuapp.com',
 ]
 
 
